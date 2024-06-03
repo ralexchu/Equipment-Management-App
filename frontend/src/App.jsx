@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react'
+import UserList from './UserList'
 import './App.css'
 
 function App() {
-  const [users, setUsers] = useState([])
+  const [users, setUsers] = useState([{'firstName':'Robert', 'lastName': 'Lee', 'email':'abc@gmail.com'}])
 
   useEffect(() => {
-    fetchUsers()
+    // fetchUsers()
   }, [])
 
   const fetchUsers = async () => {
@@ -18,9 +19,7 @@ function App() {
 
 
   return (
-    <>
-
-    </>
+    <UserList users={users}/>
   )
 }
 
